@@ -1,6 +1,6 @@
 {
   "name": "ngx-paddle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6"
