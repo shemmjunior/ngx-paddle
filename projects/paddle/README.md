@@ -13,13 +13,13 @@ Make sure you have an active Paddle account and have read the docs on [paddle.co
 #### 1a) Install with NPM
 
 ```shell
-$ npm install ngx-paddle-wrapper
+$ npm install ngx-paddle
 ```
 
 #### 1b) Or Yarn
 
 ```shell
-$ yarn add ngx-paddle-wrapper
+$ yarn add ngx-paddle
 ```
 
 #### 2) Import the PaddleModule
@@ -30,11 +30,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { PaddleModule } from 'ngx-paddle-wrapper';
+import { PaddleModule } from 'ngx-paddle';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, PaddleModule],
+  imports: [BrowserModule, PaddleModule.forRoot({ sandbox: true/false })],
   providers: [],
   bootstrap: [AppComponent],
 })
@@ -65,7 +65,7 @@ import {
   PaddleCheckoutOptions,
   PaddleEventCallbackData,
   PADDLE_EVENT_TYPE,
-} from 'ngx-paddle-wrapper';
+} from 'ngx-paddle';
 
 export class ComponentThatImplementsPaddle implements AfterViewInit {
   private paddleOptions: PaddleCheckoutOptions = {
@@ -127,7 +127,7 @@ import {
   PaddleCheckoutOptions,
   PaddleEventCallbackData,
   PADDLE_EVENT_TYPE,
-} from 'ngx-paddle-wrapper';
+} from 'ngx-paddle';
 
 export class ComponentThatImplementsPaddle implements AfterViewInit {
   private paddleOptions: PaddleCheckoutOptions = {

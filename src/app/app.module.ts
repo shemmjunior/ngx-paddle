@@ -7,7 +7,7 @@ import { PaddleModule } from 'paddle';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, PaddleModule],
+  imports: [BrowserModule, PaddleModule.forRoot({ sandbox: true })],
   providers: [],
   bootstrap: [AppComponent],
 })

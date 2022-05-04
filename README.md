@@ -1,10 +1,12 @@
-# Angular Paddle Wrapper
+# Angular Paddle
 
 This is an Angular wrapper library for Paddle.js.
 
+This is an extension for the previous [Angular-Paddle-Wrapper-Library](https://github.com/oakify/ngx-paddle-wrapper) by [Oakify](https://github.com/oakify) modified by adding the capability to toggle between sandbox and production environment. 
+
 The author has no affiliation with Paddle.com Market Limited.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
 ## How to use
 
@@ -13,13 +15,13 @@ Make sure you have an active Paddle account and have read the docs on [paddle.co
 #### 1a) Install with NPM
 
 ```shell
-$ npm install ngx-paddle-wrapper
+$ npm install ngx-paddle
 ```
 
 #### 1b) Or Yarn
 
 ```shell
-$ yarn add ngx-paddle-wrapper
+$ yarn add ngx-paddle
 ```
 
 #### 2) Import the PaddleModule
@@ -30,11 +32,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { PaddleModule } from 'ngx-paddle-wrapper';
+import { PaddleModule } from 'ngx-paddle';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, PaddleModule],
+  imports: [BrowserModule, PaddleModule.forRoot({ sandbox: true/false })],
   providers: [],
   bootstrap: [AppComponent],
 })
@@ -65,7 +67,7 @@ import {
   PaddleCheckoutOptions,
   PaddleEventCallbackData,
   PADDLE_EVENT_TYPE,
-} from 'ngx-paddle-wrapper';
+} from 'ngx-paddle';
 
 export class ComponentThatImplementsPaddle implements AfterViewInit {
   private paddleOptions: PaddleCheckoutOptions = {
@@ -127,7 +129,7 @@ import {
   PaddleCheckoutOptions,
   PaddleEventCallbackData,
   PADDLE_EVENT_TYPE,
-} from 'ngx-paddle-wrapper';
+} from 'ngx-paddle';
 
 export class ComponentThatImplementsPaddle implements AfterViewInit {
   private paddleOptions: PaddleCheckoutOptions = {

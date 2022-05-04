@@ -1,6 +1,6 @@
 {
-  "name": "ngx-paddle-wrapper",
-  "version": "0.0.4",
+  "name": "ngx-paddle",
+  "version": "0.0.0",
   "peerDependencies": {
     "@angular/common": "^10.1.6",
     "@angular/core": "^10.1.6"
@@ -11,7 +11,7 @@
   "description": "This is an Angular wrapper library for Paddle.js.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoomDev/ngx-paddle-wrapper.git"
+    "url": "git+https://github.com/shemmjunior/ngx-paddle.git"
   },
   "keywords": [
     "angular",
@@ -19,10 +19,10 @@
     "paddle.js",
     "wrapper"
   ],
-  "author": "BoomDev",
+  "author": "shemmjunior",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BoomDev/ngx-paddle-wrapper/issues"
+    "url": "https://github.com/shemmjunior/ngx-paddle/issues"
   },
-  "homepage": "https://github.com/BoomDev/ngx-paddle-wrapper#readme"
+  "homepage": "https://github.com/shemmjunior/ngx-paddle#readme"
 }

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { GLOBAL_CONFIGURATION_SERVICE, GlobalConfiguration } from './global.config';
 import {
   PaddleCheckoutOptions,
   PaddleConfig,
@@ -13,7 +14,11 @@ declare let Paddle: any;
 export class PaddleService {
   private loaded: Promise<void>;
 
-  constructor() {}
+  constructor(
+    @Inject(GLOBAL_CONFIGURATION_SERVICE)
+    private config: GlobalConfiguration
+  ) {
+  }
 
   /**
    * Create a Paddle instance as soon as Paddle has loaded.
@@ -23,6 +28,9 @@ export class PaddleService {
   public create(config: PaddleConfig): Promise<void> {
     return this.load().then(() => {
       Paddle.Setup(config);
+      if (this.config.sandbox === true) {
+        Paddle.Environment.set('sandbox')
+      }
     });
   }
 
