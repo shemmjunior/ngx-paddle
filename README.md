@@ -169,7 +169,11 @@ export class ComponentThatImplementsPaddle implements AfterViewInit {
 }
 ```
 
-## How to contribute
+### How to build
+
+Just run `ng build paddle` and the library will be generated at dist folder
+
+### How to contribute
 
 Want to contribute to this project? Awesome! There are many ways you can contribute, see below.
 

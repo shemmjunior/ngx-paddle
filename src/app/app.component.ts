@@ -28,13 +28,13 @@ export class AppComponent implements OnInit {
     this.price = await this.paddleServ.getPrice(this.productId);
   }
 
-  onSubscribe() {
+  onSubscribe(): void {
     this.paddleServ.open({
       product: this.productId,
     });
   }
 
-  checkEvent(data: PaddleEventCallbackData) {
+  checkEvent(data: PaddleEventCallbackData): any {
     // Handle Event
     if (data.event === PADDLE_EVENT_TYPE.CheckoutComplete) {
       console.log('User has completed checkout!');
