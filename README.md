@@ -82,11 +82,21 @@ export class ComponentThatImplementsPaddle implements AfterViewInit {
 
   // Create and open programatically once the library is loaded.
   ngAfterViewInit() {
+    // Method 1: If you don't need to extract callback data from paddle to angular application
     this.paddleServ.create({
       vendor: 123456,
       eventCallback: this.checkEvent,
     });
+    
+    // Method 2: Extracting callback data from paddle to angular application
+    this.paddleServ.create({
+      vendor: 123456,
+      eventCallback: (response) => {
+        console.log(response);
+      },
+    });
   }
+  
 
   onSubscribe() {
     this.paddleServ.open(this.paddleOptions);
